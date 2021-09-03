@@ -1,0 +1,7 @@
+{
+  "name": "fetch",
+  "packageManager": "yarn@3.0.1",
+  "scripts": {
+    "build": "yarn dlx uglify-js worker.js -c -m -o worker.js"
+  }
+}
