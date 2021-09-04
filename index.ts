@@ -9,7 +9,7 @@ export const load_worker = async (
       ? api_paths.map(
           (api_path: [string, (RequestInit | undefined)?]) =>
             new Promise((resolve: (value: message_event_type | undefined) => void) => {
-              const worker = new Worker(`/assets/web-worker/fetch/worker.js`);
+              const worker = new Worker(`./assets/web-worker/fetch/worker.js`);
               worker.postMessage(JSON.stringify(api_path));
               if (get_worker_response) {
                 const message_listener = (event: MessageEvent<string>) => {
